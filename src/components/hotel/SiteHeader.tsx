@@ -43,18 +43,11 @@ export function SiteHeader() {
         >
           {/* Logo */}
           <Link to="/" className="group flex items-center gap-3" aria-label="Artsuzani Hotel home">
-            <div className="relative grid size-12 place-items-center rounded-full border border-gold/40 bg-card transition-all duration-500 group-hover:border-gold group-hover:shadow-glow">
-              <Sparkles className="size-5 text-gold transition-transform duration-500 group-hover:rotate-180" />
-              <span className="absolute inset-0 rounded-full bg-gold/0 transition-colors duration-500 group-hover:bg-gold/10" />
-            </div>
-            <div className="hidden flex-col leading-tight sm:flex">
-              <span className="font-serif text-xl font-medium tracking-wide text-foreground">
-                Artsuzani
-              </span>
-              <span className="text-[0.62rem] font-medium uppercase tracking-[0.32em] text-gold-deep">
-                Hotel · Bukhara
-              </span>
-            </div>
+            <img
+              src="https://8npyms8qz2.ufs.sh/f/tLZsXxIXMCJ32RNJl1QqM6OtfBkRePmcFj9JUE1HVuQZpoLz"
+              alt="Artsuzani Hotel logo"
+              className=" h-75 w-auto transition-transform duration-300 group-hover:rotate-6"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -129,11 +122,7 @@ export function SiteHeader() {
               </Link>
             ))}
           </div>
-          <Link
-            to="/account"
-            onClick={() => setMobileOpen(false)}
-            className="btn-gold mt-5 w-full"
-          >
+          <Link to="/account" onClick={() => setMobileOpen(false)} className="btn-gold mt-5 w-full">
             <UserRound className="size-4" /> My bookings
           </Link>
         </div>

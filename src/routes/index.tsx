@@ -18,8 +18,7 @@ import { RoomCard } from "@/components/hotel/RoomCard";
 import { SiteHeader } from "@/components/hotel/SiteHeader";
 import { galleryImages, rooms, getCurrentlyBookedRoomSlugs, WHATSAPP_NUMBER } from "@/lib/hotel";
 
-const HERO_IMAGE =
-  "https://8npyms8qz2.ufs.sh/f/tLZsXxIXMCJ3J11U1IGPNuiPOyCWIqmas4RvDp98LtEnwZKY";
+const HERO_IMAGE = "https://8npyms8qz2.ufs.sh/f/tLZsXxIXMCJ3J11U1IGPNuiPOyCWIqmas4RvDp98LtEnwZKY";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -260,9 +259,7 @@ function Index() {
             {galleryImages.slice(0, 6).map((image, index) => (
               <figure
                 key={`${image.alt}-${index}`}
-                className={`image-frame group ${
-                  index === 0 ? "md:col-span-2 md:row-span-2" : ""
-                }`}
+                className={`image-frame group ${index === 0 ? "md:col-span-2 md:row-span-2" : ""}`}
               >
                 <img
                   src={image.src as string}
@@ -280,12 +277,7 @@ function Index() {
       {/* ─────────── CTA ─────────── */}
       <section className="relative overflow-hidden px-5 py-24 md:px-8 md:py-32">
         <div className="absolute inset-0">
-          <img
-            src={HERO_IMAGE}
-            alt=""
-            aria-hidden="true"
-            className="h-full w-full object-cover"
-          />
+          <img src={HERO_IMAGE} alt="" aria-hidden="true" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/95" />
           <div className="absolute inset-0 suzani-pattern opacity-15" />
         </div>
@@ -316,22 +308,17 @@ function Index() {
       {/* ─────────── Footer ─────────── */}
       <footer className="relative border-t border-border/40 bg-card/50 px-5 py-12 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
-          <div>
-            <Link to="/" className="group inline-flex items-center gap-3">
-              <div className="grid size-11 place-items-center rounded-full border border-gold/40 bg-card transition-all group-hover:shadow-glow">
-                <Sparkles className="size-4 text-gold" />
-              </div>
-              <div>
-                <p className="font-serif text-lg leading-tight">Artsuzani Hotel</p>
-                <p className="text-[0.66rem] uppercase tracking-[0.28em] text-gold-deep">
-                  Bukhara · Uzbekistan
-                </p>
-              </div>
-            </Link>
-            <p className="mt-5 max-w-xs text-sm leading-6 text-muted-foreground">
-              Luxury cultural stays in the heart of historic Bukhara.
-            </p>
-          </div>
+          <Link
+            to="/"
+            className="group w-50 flex items-center gap-3"
+            aria-label="Artsuzani Hotel home"
+          >
+            <img
+              src="https://8npyms8qz2.ufs.sh/f/tLZsXxIXMCJ32RNJl1QqM6OtfBkRePmcFj9JUE1HVuQZpoLz"
+              alt="Artsuzani Hotel logo"
+              className=" h-50  w-50 transition-transform duration-300 group-hover:rotate-6"
+            />
+          </Link>
           <div>
             <p className="eyebrow">Visit</p>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
@@ -378,7 +365,12 @@ function Index() {
           <p className="inline-flex items-center gap-2">
             <Star className="size-3.5 text-gold" /> © {new Date().getFullYear()} Artsuzani Hotel
           </p>
-          <p className="uppercase tracking-[0.22em]">Crafted with care</p>
+          <p className="uppercase tracking-[0.22em]">
+            Created with{" "}
+            <a href="https://new.umidjon.dev" target="_blank" rel="noreferrer">
+              @umidjon_developer
+            </a>
+          </p>
         </div>
       </footer>
     </main>
